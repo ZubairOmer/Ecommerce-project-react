@@ -4,7 +4,7 @@ import './MenuItem.css'
 const MenuItem = ({ title, imageUrl, size }) => {
     return (
         <div className={`${size} menu-item`}>
-            <div style={{
+            <div className='background-image' style={{
                 backgroundImage: `url(${imageUrl})`
             }} />
             <div className="content">
