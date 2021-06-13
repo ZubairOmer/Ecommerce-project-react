@@ -1,13 +1,13 @@
 import React from 'react'
 import './PreviewCollection.css'
 
-export const PreviewCollection = ({ title, items }) => {
+const PreviewCollection = ({ title, items }) => {
     return (
         <div className='collection-preview'>
             <h1 className="title">{title}</h1>
             <div className="preview">
                 {
-                    items.map(item => (
+                    items.filter((item, index) => index < 4).map(item => (
                         <div key={item.id}>{item.name}</div>
                     ))
                 }
@@ -15,3 +15,5 @@ export const PreviewCollection = ({ title, items }) => {
         </div>
     )
 }
+
+export default PreviewCollection
