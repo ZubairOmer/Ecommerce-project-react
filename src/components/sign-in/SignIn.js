@@ -10,11 +10,24 @@ export default class SignIn extends Component {
         }
     }
 
+    handleSubmit = event => {
+        event.target.preventDefault();
+    }
+
     render() {
         return (
             <div className='sign-in'>
                 <h2>Already have an account</h2>
                 <span>sign in with your email and password</span>
+
+                <form onSubmit={this.handleSubmit}>
+                    <input type="email" name="email" value={this.state.email} />
+                    <label>Email</label>
+                    <input type="password" name="password" value={this.state.password} />
+                    <label>Password</label>
+
+                    <input type="submit" value="Submit Form" />
+                </form>
             </div>
         )
     }
