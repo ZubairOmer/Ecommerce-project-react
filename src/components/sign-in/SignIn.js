@@ -12,6 +12,15 @@ export default class SignIn extends Component {
 
     handleSubmit = event => {
         event.target.preventDefault();
+        this.setState({
+            email: '', password: ''
+        })
+    }
+
+    handleChange = e => {
+        this.setState({
+            [e.target.name]: e.target.value
+        })
     }
 
     render() {
@@ -21,9 +30,22 @@ export default class SignIn extends Component {
                 <span>sign in with your email and password</span>
 
                 <form onSubmit={this.handleSubmit}>
-                    <input type="email" name="email" value={this.state.email} />
+                    <input
+                        type="email"
+                        name="email"
+                        value={this.state.email}
+                        onChange={this.handleChange}
+                        required
+                    />
                     <label>Email</label>
-                    <input type="password" name="password" value={this.state.password} />
+
+                    <input
+                        type="password"
+                        name="password"
+                        value={this.state.password}
+                        onChange={this.handleChange}
+                        required
+                    />
                     <label>Password</label>
 
                     <input type="submit" value="Submit Form" />
