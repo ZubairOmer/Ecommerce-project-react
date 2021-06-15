@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import FormInput from '../form-input/FormInput'
 
 export default class SignIn extends Component {
     constructor(props) {
@@ -29,7 +30,7 @@ export default class SignIn extends Component {
                 <span>sign in with your email and password</span>
 
                 <form onSubmit={this.handleSubmit}>
-                    <input
+                    <FormInput
                         type="email"
                         name="email"
                         value={this.state.email}
@@ -38,7 +39,7 @@ export default class SignIn extends Component {
                     />
                     <label>Email</label>
 
-                    <input
+                    <FormInput
                         type="password"
                         name="password"
                         value={this.state.password}
