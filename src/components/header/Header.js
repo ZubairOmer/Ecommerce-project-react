@@ -2,6 +2,7 @@ import React from 'react'
 import './Header.css'
 import { Link } from 'react-router-dom'
 import { ReactComponent as Logo } from '../../assets/4.3 crown.svg.svg'
+import { auth } from '../../firebase/firebase.utils'
 
 const Header = () => {
     return (
@@ -16,6 +17,9 @@ const Header = () => {
                 <Link to='/shop' className='option'>
                     CONTACT
                 </Link>
+                {
+
+                }
             </div>
         </div>
     )
