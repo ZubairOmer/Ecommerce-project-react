@@ -50,7 +50,7 @@ export default class SignIn extends Component {
                         required
                     />
 
-                    <CustomButton />
+                    <CustomButton type="submit">Sign In</CustomButton>
                 </form>
             </div>
         )
